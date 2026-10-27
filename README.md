@@ -62,4 +62,4 @@ The PDA can recognize $L$ because its stack allows it to keep track of arbitrari
 
 ### Technologies
 - MATLAB
-- Lean
+- Lean 4
