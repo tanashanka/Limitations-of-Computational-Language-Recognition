@@ -34,18 +34,18 @@ The lemma ``recognizer_correct`` combines these directions as the final step of 
 ## Comparing Finite-State and Stack Memory
 We can compare how DFA and PDA recognize $L$ by tracing the DFA state and PDA stack depth. By comparing the results from inputs that are valid in $L$ and invalid in $L$, we can explore the limitations of computation using these memory types.
 
-![DFA stack depth for 'aabb'](FormalLanguages/images/DFAaabb.png)
-![PDA stack depth for 'aabb'](FormalLanguages/images/PDAaabb.png)
+![DFA stack depth for 'aabb'](MATLAB/images/DFAaabb.png)
+![PDA stack depth for 'aabb'](MATLAB/images/PDAaabb.png)
 
 The above graphs track the memory states for the DFA and PDA for the word $aabb$. In the DFA state trace, $q_0$ or $q_1$ are valid end states, while in the PDA stack trace, a valid word must reach depth zero at the final symbol. In this case, the word belongs in $L$, so both automata accept $aabb$.
 
-![DFA stack depth for 'aba'](FormalLanguages/images/DFAaba.png)
-![PDA stack depth for 'aba'](FormalLanguages/images/PDAaba.png)
+![DFA stack depth for 'aba'](MATLAB/images/DFAaba.png)
+![PDA stack depth for 'aba'](MATLAB/images/PDAaba.png)
 
 These graphs track the memory states for the DFA and PDA for the word $aba$. In this case, the word does not belong in $L$ because there are uneven counts of $a$'s and $b$'s, and it does not follow the structure $a^*b^*$, so both automata reject $aba$. The DFA enters its invalid state and the PDA detects the invalid transition back to an $a$ after beginning to read $b$'s.
 
-![DFA stack depth for 'aab'](FormalLanguages/images/DFAaab.png)
-![PDA stack depth for 'aab'](FormalLanguages/images/PDAaab.png)
+![DFA stack depth for 'aab'](MATLAB/images/DFAaab.png)
+![PDA stack depth for 'aab'](MATLAB/images/PDAaab.png)
 
 These graphs track the memory states for the DFA and PDA for the word $aab$. In this case, the word does not belong in $L$ only because there are uneven counts of $a$'s and $b$'s. The PDA correctly rejects $aab$ because there is one marker left in the stack after the end of the input. However, the DFA incorrectly accepts $aab$ because it only checks the order of the symbols, which highlights the limitations of using a DFA to recognize a language.
 
