@@ -42,7 +42,7 @@ The above graphs track the memory states for the DFA and PDA for the word $aabb$
 ![DFA stack depth for 'aba'](MATLAB/images/DFAaba.png)
 ![PDA stack depth for 'aba'](MATLAB/images/PDAaba.png)
 
-These graphs track the memory states for the DFA and PDA for the word $aba$. In this case, the word does not belong in $L$ because there are uneven counts of $a$'s and $b$'s, and it does not follow the structure $a^{*}b^{*}$, so both automata reject $aba$. The DFA enters its invalid state and the PDA detects the invalid transition back to an $a$ after beginning to read $b$'s.
+These graphs track the memory states for the DFA and PDA for the word $aba$. In this case, the word does not belong in $L$ because there are uneven counts of $a$'s and $b$'s, and it does not follow the structure $a^\text{*}b^\text{*}$, so both automata reject $aba$. The DFA enters its invalid state and the PDA detects the invalid transition back to an $a$ after beginning to read $b$'s.
 
 ![DFA stack depth for 'aab'](MATLAB/images/DFAaab.png)
 ![PDA stack depth for 'aab'](MATLAB/images/PDAaab.png)
